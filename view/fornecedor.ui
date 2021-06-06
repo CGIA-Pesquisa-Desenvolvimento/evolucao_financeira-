@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Fornecedor</class>
+ <widget class="QDialog" name="Fornecedor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>586</width>
+    <height>370</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="pbApagar">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>260</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Apagar</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="leFornecedor">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>50</y>
+     <width>500</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbSalvarEditar">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>260</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Salvar</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="cbinstituicaoBancaria">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>121</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>InstituiçãoBancária</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="pteDescricao">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>541</width>
+     <height>91</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

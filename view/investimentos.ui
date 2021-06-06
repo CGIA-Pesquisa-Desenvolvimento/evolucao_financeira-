@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Investimentos</class>
+ <widget class="QDialog" name="Investimentos">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>544</width>
+    <height>584</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>110</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Produto Financeiro</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="cbAporteInicial">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>300</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Aporte Inicial</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="pteObs">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>450</y>
+     <width>481</width>
+     <height>71</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="rbRendaVariavel">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>150</y>
+     <width>101</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Renda variável</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="leValorCotas">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>300</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cbFornecedor">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>161</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="rbRendaFixa">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>120</y>
+     <width>82</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Renda Fixa</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fornecedor</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>430</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Observação</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="leNumeroCotas">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>230</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>350</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Data</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>210</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Número de cotas</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>280</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Valor Cota</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cbTipoInvestimento">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>130</y>
+     <width>161</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="dteDataAporte">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>370</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Principal</class>
+ <widget class="QMainWindow" name="Principal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Controle Financeiro</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>540</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Powered By CGIA</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>150</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Receita</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>150</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>vlReceita</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>220</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Despesa</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>220</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>vlDespesa</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>70</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>vlTotal</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>70</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Valor Total</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnTeste">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>340</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArquivo">
+    <property name="title">
+     <string>Arquivo</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionSair"/>
+   </widget>
+   <widget class="QMenu" name="menuCadastros">
+    <property name="title">
+     <string>Cadastros</string>
+    </property>
+    <addaction name="actionFornecedor"/>
+    <addaction name="actionProdutos_para_investimentos"/>
+    <addaction name="action_indices_de_Inflacao"/>
+    <addaction name="actionTipo_de_Investimento"/>
+    <addaction name="actionForma_de_Pagamento"/>
+    <addaction name="actionUsuario"/>
+    <addaction name="actionCategoria"/>
+   </widget>
+   <widget class="QMenu" name="menuLan_amentos">
+    <property name="title">
+     <string>Registros</string>
+    </property>
+    <addaction name="actionReceitas_Despesas"/>
+    <addaction name="actionInvestimentos"/>
+    <addaction name="actionDevalorizacaoMonetaria"/>
+   </widget>
+   <addaction name="menuArquivo"/>
+   <addaction name="menuCadastros"/>
+   <addaction name="menuLan_amentos"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionFornecedor">
+   <property name="text">
+    <string>Fornecedores</string>
+   </property>
+  </action>
+  <action name="actionReceitas_Despesas">
+   <property name="text">
+    <string>Receitas/Despesas</string>
+   </property>
+  </action>
+  <action name="actionInvestimentos">
+   <property name="text">
+    <string>Investimentos</string>
+   </property>
+  </action>
+  <action name="actionProdutos_para_investimentos">
+   <property name="text">
+    <string>Produtos para investimentos</string>
+   </property>
+  </action>
+  <action name="action_indices_de_Inflacao">
+   <property name="text">
+    <string>Índices de Inflação</string>
+   </property>
+  </action>
+  <action name="actionDevalorizacaoMonetaria">
+   <property name="text">
+    <string>Desvalorização Monetária</string>
+   </property>
+  </action>
+  <action name="actionSair">
+   <property name="text">
+    <string>Sair</string>
+   </property>
+  </action>
+  <action name="actionTipo_de_Investimento">
+   <property name="text">
+    <string>Tipo de Investimento</string>
+   </property>
+  </action>
+  <action name="actionForma_de_Pagamento">
+   <property name="text">
+    <string>Forma de Pagamento</string>
+   </property>
+  </action>
+  <action name="actionUsuario">
+   <property name="text">
+    <string>Usuário</string>
+   </property>
+  </action>
+  <action name="actionCategoria">
+   <property name="text">
+    <string>Categoria</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionSair</sender>
+   <signal>triggered()</signal>
+   <receiver>Principal</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
