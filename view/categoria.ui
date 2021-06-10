@@ -18,7 +18,7 @@
     <rect>
      <x>30</x>
      <y>90</y>
-     <width>61</width>
+     <width>81</width>
      <height>16</height>
     </rect>
    </property>
@@ -62,16 +62,6 @@
     <string>Apagar</string>
    </property>
   </widget>
-  <widget class="QPlainTextEdit" name="pteObs">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>110</y>
-     <width>541</width>
-     <height>71</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -83,6 +73,16 @@
    </property>
    <property name="text">
     <string>Categoria</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="pteObs">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>130</y>
+     <width>511</width>
+     <height>87</height>
+    </rect>
    </property>
   </widget>
  </widget>

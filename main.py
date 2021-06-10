@@ -10,7 +10,8 @@ from PyQt5.QtPrintSupport import *
 import os, sys
 
 from view.frm_principal import Ui_Principal
-from controller.login import Login
+##from controller.login import Login
+from  controller.principal import Principal
 # #import os
 # from view.principal import Ui_Principal
 # from database import conexao, criar_tabelas
@@ -38,7 +39,7 @@ from controller.login import Login
 
 app = QApplication(sys.argv)
 if (QDialog.Accepted == True):
-    #window = principal()
-    window = Login()
+    window = Principal()
+    ##window = Login()
     window.show()
 sys.exit(app.exec_())
