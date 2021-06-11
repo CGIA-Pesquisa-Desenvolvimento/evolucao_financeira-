@@ -6,7 +6,7 @@ import sqlite3
 #from db import conexao
 
 try:
-    conn1 = sqlite3.connect('/home/carlos/Documentos/projetos/python/evolucao_financeira/db/controle_financeiro.db')
+    conn = sqlite3.connect('/home/carlos/Documentos/projetos/python/evolucao_financeira/db/controle_financeiro.db')
 
 
 except sqlite3.Error as e:
@@ -37,7 +37,7 @@ class CategoriaDAO:
         # conn = conexao
         # db = conn.conection()
 
-    def Atualizar(conn, categoria):
+    def Atualizar(categoria):
         """
 
         :param conn:
@@ -58,23 +58,20 @@ class CategoriaDAO:
         :param categoria:
         :return:
         """
-     #   conn = conexao
-      #  db = conn1.
-      #   ca = cta
-      #   type(cta)
+
         query = "INSERT INTO categoria (nome_categoria, obs) VALUES (?, ?)"
 
-        cur = conn1.cursor()
+        cur = conn.cursor()
         cur.execute(query, (c, o))
-        conn1.commit()
-        conn1.close()
+        conn.commit()
+        conn.close()
 
 
 
     # TODO Adicionar try except nas funçoes sql
 
 
-    def Apagar(conn, id):
+    def Apagar(id):
         """
 
         :param conn:
@@ -87,7 +84,7 @@ class CategoriaDAO:
         cur.execute(query, (id,))
         conn.commit()
 
-    def Pesquisa(conn, categoria=None):
+    def Pesquisa(categoria=None):
         """
 
         :param conn:

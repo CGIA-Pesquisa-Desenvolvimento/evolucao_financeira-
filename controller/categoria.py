@@ -22,10 +22,6 @@ class Categoria(QDialog):
         self.ui.pbApagar.clicked.connect(self.apagar)
 
     def gravar(self, cat, obs):
-        # categoriaDTO = CategoriaDAO
-        # categoriaDTO.DataNomeCategoria = cat
-        # categoriaDTO.DataObs = 'obs'
-
         categoriaDAO = CategoriaDAO
         categoriaDAO.Gravar(cat, obs)
         self.apagar()
