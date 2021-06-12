@@ -36,7 +36,6 @@ from  controller.principal import Principal
 #       self.ui = Ui_Login()
 #       self.ui.setupUi(self)
 
-
 app = QApplication(sys.argv)
 if (QDialog.Accepted == True):
     window = Principal()
