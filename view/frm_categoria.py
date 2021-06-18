@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Categoria(object):
     def setupUi(self, Categoria):
         Categoria.setObjectName("Categoria")
-        Categoria.resize(587, 370)
+        Categoria.resize(587, 461)
         self.label_2 = QtWidgets.QLabel(Categoria)
         self.label_2.setGeometry(QtCore.QRect(30, 90, 81, 16))
         self.label_2.setObjectName("label_2")
@@ -22,10 +22,10 @@ class Ui_Categoria(object):
         self.leCategoria.setGeometry(QtCore.QRect(30, 30, 500, 20))
         self.leCategoria.setObjectName("leCategoria")
         self.pbSalvarEditar = QtWidgets.QPushButton(Categoria)
-        self.pbSalvarEditar.setGeometry(QtCore.QRect(80, 260, 81, 31))
+        self.pbSalvarEditar.setGeometry(QtCore.QRect(60, 400, 81, 31))
         self.pbSalvarEditar.setObjectName("pbSalvarEditar")
         self.pbApagar = QtWidgets.QPushButton(Categoria)
-        self.pbApagar.setGeometry(QtCore.QRect(370, 260, 81, 31))
+        self.pbApagar.setGeometry(QtCore.QRect(370, 400, 81, 31))
         self.pbApagar.setObjectName("pbApagar")
         self.label = QtWidgets.QLabel(Categoria)
         self.label.setGeometry(QtCore.QRect(30, 10, 61, 16))
@@ -33,6 +33,11 @@ class Ui_Categoria(object):
         self.pteObs = QtWidgets.QPlainTextEdit(Categoria)
         self.pteObs.setGeometry(QtCore.QRect(30, 130, 511, 87))
         self.pteObs.setObjectName("pteObs")
+        self.tbwCategoria = QtWidgets.QTableWidget(Categoria)
+        self.tbwCategoria.setGeometry(QtCore.QRect(30, 230, 511, 121))
+        self.tbwCategoria.setObjectName("tbwCategoria")
+        self.tbwCategoria.setColumnCount(0)
+        self.tbwCategoria.setRowCount(0)
 
         self.retranslateUi(Categoria)
         QtCore.QMetaObject.connectSlotsByName(Categoria)
