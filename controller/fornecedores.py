@@ -21,12 +21,12 @@ class Fornecedor(QDialog):
         self.ui.pbSalvarEditar.clicked.connect(self.salvar)
         self.ui.pbApagar.clicked.connect(self.apagar)
 
-    def gravar(self, nome, instituicao, descricao):
+    def gravar(self, nome: str, instituicao: bool, descricao: str) -> None:
         fornecedorDAO = FornecedorDAO
         fornecedorDAO.gravar(nome, instituicao, descricao)
         self.apagar()
 
-    def salvar(self):
+    def salvar(self) -> None:
         n = self.ui.leFornecedor.text()
         if self.ui.cbinstituicaoBancaria.isChecked():
             i = 1
@@ -35,7 +35,7 @@ class Fornecedor(QDialog):
         d = self.ui.pteDescricao.toPlainText()
         self.gravar(n, i, d)
 
-    def apagar(self):
+    def apagar(self) -> None:
         self.ui.leFornecedor.clear()
         self.ui.cbinstituicaoBancaria.setChecked(False)
         self.ui.pteDescricao.clear()

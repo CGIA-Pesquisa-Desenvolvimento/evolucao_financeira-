@@ -37,7 +37,7 @@ class CategoriaDAO:
         # conn = conexao
         # db = conn.conection()
 
-    def Atualizar(categoria):
+    def Atualizar(id, cat, obs):
         """
 
         :param conn:
@@ -47,8 +47,10 @@ class CategoriaDAO:
 
         query = "UPDATE categoria SET nome_categoria = ?, obs = ? WHERE id = ?"
         cur = conn.cursor()
-        cur.execute(query, categoria)
+        cur.execute(query, (cat, obs, id))
         conn.commit()
+        cur.close()
+        conn.close()
 
 
     def Gravar(c, o):
@@ -64,6 +66,7 @@ class CategoriaDAO:
         cur = conn.cursor()
         cur.execute(query, (c, o))
         conn.commit()
+        cur.close()
         conn.close()
 
 
@@ -81,7 +84,7 @@ class CategoriaDAO:
         query = "DELETE FROM categoria WHERE ID = ?"
 
         cur = conn.cursor()
-        cur.execute(query, (id,))
+        cur.execute(query, id)
         conn.commit()
 
     def Pesquisa(categoria=None):

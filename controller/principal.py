@@ -32,7 +32,7 @@ class Principal(QMainWindow):
         self.ui.actionReceitas_Despesas.triggered.connect(self.add_receita_despesa)
         self.ui.actionDevalorizacaoMonetaria.triggered.connect(self.add_valor_desvalorizacao)
 
-    def add(self):
+    def add(self) -> None:
         add = Fornecedor()
         add.exec_()
 

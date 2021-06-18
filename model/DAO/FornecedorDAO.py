@@ -59,7 +59,7 @@ class FornecedorDAO:
         :return:
         """
 
-        query = "INSERT INTO fornecedor (nome_fornecedor, instituicao_bancaria, descricao) VALUES (?, ?, ?)"
+        query = "INSERT INTO fornecedor (nome_fornecedor, instituicao_bancaria, descricao) VALUES (?, ?, ?)" #TODO Corrigir erro de conexão fechada com dois inserts consecutivos
 
         cur = conn.cursor()
         cur.execute(query, (n, i, d))

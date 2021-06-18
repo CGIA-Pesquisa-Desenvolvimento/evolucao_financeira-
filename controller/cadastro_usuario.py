@@ -20,18 +20,18 @@ class CadastroUsuario(QDialog):
         self.ui.pbSalvarEditar.clicked.connect(self.salvar)
         self.ui.pbApagar.clicked.connect(self.apagar)
 
-    def gravar(self, nome, email, senha):
+    def gravar(self, nome: str, email: str, senha: str) -> None:
         usuarioDAO = CadastroUsuarioDAO
         usuarioDAO.gravar(nome, email, senha)
         self.apagar()
 
-    def salvar(self):
+    def salvar(self) -> None:
         n = self.ui.leNome.text()
         l = self.ui.leLogin.text()
         s = self.ui.leSenha.text()
         self.gravar(n, l, s)
 
-    def apagar(self):
+    def apagar(self) -> None:
         self.ui.leLogin.clear()
         self.ui.leSenha.clear()
         self.ui.leNome.clear()
