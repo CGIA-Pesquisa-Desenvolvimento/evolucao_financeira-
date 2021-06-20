@@ -11,7 +11,7 @@ from view.frm_principal import Ui_Principal
 from controller.fornecedores import Fornecedor
 from controller.categoria import Categoria
 from controller.cadastro_usuario import CadastroUsuario
-from controller.tipo_investimentos import TipoInvestimento
+from controller.produto_investimentos import ProdutoInvestimento
 from controller.investimentos import Investimentos
 from controller.forma_pagamento import FormaPagamento
 from controller.receitas_despesas import ReceitasDespesas
@@ -26,7 +26,7 @@ class Principal(QMainWindow):
         self.ui.actionFornecedor.triggered.connect(self.add)
         self.ui.actionCategoria.triggered.connect(self.add_categoria)
         self.ui.actionUsuario.triggered.connect(self.add_cadastro_usuario)
-        self.ui.actionTipo_de_Investimento.triggered.connect(self.add_tipo_investimento)
+        self.ui.actionProdutos_para_investimentos.triggered.connect(self.add_produto_investimento)
         self.ui.actionInvestimentos.triggered.connect(self.add_investimento)
         self.ui.actionForma_de_Pagamento.triggered.connect(self.add_forma_pagamento)
         self.ui.actionReceitas_Despesas.triggered.connect(self.add_receita_despesa)
@@ -44,9 +44,9 @@ class Principal(QMainWindow):
         add_cadastro_usuario = CadastroUsuario()
         add_cadastro_usuario.exec_()
 
-    def add_tipo_investimento(self):
-        add_tipo_investimento = TipoInvestimento()
-        add_tipo_investimento.exec_()
+    def add_produto_investimento(self):
+        add_produto_investimento = ProdutoInvestimento()
+        add_produto_investimento.exec_()
 
     def add_investimento(self):
         add_investimento = Investimentos()

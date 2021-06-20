@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>586</width>
-    <height>370</height>
+    <width>587</width>
+    <height>461</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="pbApagar">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>260</y>
+     <x>370</x>
+     <y>400</y>
      <width>81</width>
      <height>31</height>
     </rect>
@@ -29,8 +29,8 @@
   <widget class="QLineEdit" name="leFornecedor">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>50</y>
+     <x>30</x>
+     <y>30</y>
      <width>500</width>
      <height>20</height>
     </rect>
@@ -39,8 +39,8 @@
   <widget class="QPushButton" name="pbSalvarEditar">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>260</y>
+     <x>64</x>
+     <y>400</y>
      <width>81</width>
      <height>31</height>
     </rect>
@@ -52,8 +52,8 @@
   <widget class="QCheckBox" name="cbinstituicaoBancaria">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>100</y>
+     <x>30</x>
+     <y>70</y>
      <width>121</width>
      <height>17</height>
     </rect>
@@ -65,10 +65,20 @@
   <widget class="QPlainTextEdit" name="pteDescricao">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>140</y>
-     <width>541</width>
-     <height>91</height>
+     <x>30</x>
+     <y>130</y>
+     <width>511</width>
+     <height>87</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tbwFornecedor">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>230</y>
+     <width>511</width>
+     <height>121</height>
     </rect>
    </property>
   </widget>

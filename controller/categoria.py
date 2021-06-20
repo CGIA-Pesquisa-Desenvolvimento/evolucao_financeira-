@@ -20,26 +20,27 @@ class Categoria(QDialog):
         super(Categoria, self).__init__(*args, **kwargs)
         self.ui = Ui_Categoria()
         self.ui.setupUi(self)
+        self.setWindowTitle('Cadastro: Categorização Receita/Despesa')
         self.ui.pbSalvarEditar.clicked.connect(self.salvar)
         self.ui.pbApagar.clicked.connect(self.apagar)
         self.ui.tbwCategoria.cellClicked.connect(self.linha_selecionada)
-        self.salvar_atualizar = 1
+        self.salvar_atualizar = 1 #Flag em 0 = Atualizar, flag em 1 Gravar
         self.id = ''
         self.categoria = ''
         self.obs = ''
         self.carrega_tabela()
 
-    def linha_selecionada(self, row1):
-        v0 = self.ui.tbwCategoria.item(row1, 0)
-        v1 = self.ui.tbwCategoria.item(row1, 1)
-        v2 = self.ui.tbwCategoria.item(row1, 2)
+    """
+    Recupera os dados referente a linha selecionada
+    """
+    def linha_selecionada(self, selected_row):
+        id_categoria = self.ui.tbwCategoria.item(selected_row, 0)#Recupara coluna 0 da linha selecionada
+        categoria = self.ui.tbwCategoria.item(selected_row, 1)#Recupara coluna 1 da linha selecionada
+        obs_categoria = self.ui.tbwCategoria.item(selected_row, 2)#Recupara coluna 2 da linha selecionada
 
-        self.id  = v0.text()
-        self.categoria = v1.text()
-        self.obs = v2.text()
-        print(self.ui)
-        print(self.categoria)
-        print(self.obs)
+        self.id  = id_categoria.text()
+        self.categoria = categoria.text()
+        self.obs = obs_categoria.text()
 
         self.ui.leCategoria.setText(self.categoria)
         self.ui.pteObs.setPlainText(self.obs)
@@ -78,6 +79,7 @@ class Categoria(QDialog):
         self.carrega_tabela()
         self.ui.pbSalvarEditar.setText('Salvar')
 
+
     def carrega_tabela(self) -> None:
 
         nRow: int = 0
@@ -92,7 +94,7 @@ class Categoria(QDialog):
                 '/home/carlos/Documentos/projetos/python/evolucao_financeira/db/controle_financeiro.db')
 
             cur = conn.cursor()
-            cur.execute("SELECT * FROM categoria")
+            cur.execute("SELECT * FROM categoria") #TODO remover sql p/ model
             rows = cur.fetchall()
 
             self.ui.tbwCategoria.setRowCount(len(rows))
@@ -100,7 +102,6 @@ class Categoria(QDialog):
             self.ui.tbwCategoria.hideColumn(0)
             self.ui.tbwCategoria.setColumnWidth(1, 200)
             self.ui.tbwCategoria.setColumnWidth(2, 275)
-           # self.ui.tbwCategoria.setSizePolicy(1)
 
             for record in rows:
                 for column in record:
@@ -109,16 +110,7 @@ class Categoria(QDialog):
                     nCol += 1
                 nRow += 1
                 nCol = 0
-            # v0 = self.ui.tbwCategoria.item(0, 0)
-            # v1 = self.ui.tbwCategoria.item(0, 1)
-            # v2 = self.ui.tbwCategoria.item(0, 2)
-            # s = self.ui.tbwCategoria.selectedItems()
-            #
-            # v00 = v0.text()
-            # v11 = v1.text()
-            # v22 = v2.text()
-            # self.ui.leCategoria.setText(v11)
-            # self.ui.pteObs.setPlainText(v22)
+
         except sqlite3.Error as e:
             # TODO escrever mensagem de erro no log.txt
             print(e)

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>546</width>
-    <height>347</height>
+    <width>569</width>
+    <height>597</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -67,7 +67,7 @@
     <rect>
      <x>30</x>
      <y>230</y>
-     <width>481</width>
+     <width>511</width>
      <height>71</height>
     </rect>
    </property>
@@ -106,6 +106,42 @@
    </property>
    <property name="text">
     <string>Crédito</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tbwFormaPagamento">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>350</y>
+     <width>511</width>
+     <height>121</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbSalvarEditar">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>530</y>
+     <width>88</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Salvar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbApagar">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>530</y>
+     <width>88</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Apagar</string>
    </property>
   </widget>
  </widget>

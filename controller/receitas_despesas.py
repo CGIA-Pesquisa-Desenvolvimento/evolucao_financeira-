@@ -9,7 +9,7 @@ import os, sys
 
 from view.frm_receita_despesa import Ui_ReceitaDespesa
 
-
+#TODO Avaliar registro de impostos pagos segundo ticket fornecido no estabelecimento
 class ReceitasDespesas(QDialog):
     def __init__(self, *args, **kwargs):
         super(ReceitasDespesas, self).__init__(*args, **kwargs)

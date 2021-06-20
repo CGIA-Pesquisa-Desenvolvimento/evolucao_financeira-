@@ -17,7 +17,7 @@ except sqlite3.Error as e:
 # TODO Retirar este treche e usar função de conexão comum
 
 
-class FornecedorDAO:
+class CategoriaDAO:
 
     # def conection(db):
     #     conn = None
@@ -32,12 +32,12 @@ class FornecedorDAO:
     #         if conn:
     #             conn.close()
 
-    def cadastrar(usuario):
+    def cadastrar_categoria(categoria):
         pass
         # conn = conexao
         # db = conn.conection()
 
-    def atualizar(n, i, d, id):
+    def Atualizar(id, cat, obs):
         """
 
         :param conn:
@@ -45,13 +45,15 @@ class FornecedorDAO:
         :return:
         """
 
-        query = "UPDATE fornecedor SET nome_fornecedor = ?, instituicao_bancaria = ?, descricao = ? WHERE id = ?"
+        query = "UPDATE despesa_receita SET nome_categoria = ?, obs = ? WHERE id = ?"
         cur = conn.cursor()
-        cur.execute(query, (n, i, d, id))
+        cur.execute(query, (cat, obs, id))
         conn.commit()
+        cur.close()
+        conn.close()
 
 
-    def gravar(f, i, d):
+    def Gravar(c, o):
         """
 
         :param conn:
@@ -59,10 +61,10 @@ class FornecedorDAO:
         :return:
         """
 
-        query = "INSERT INTO fornecedor (nome_fornecedor, instituicao_bancaria, descricao) VALUES (?, ?, ?)" #TODO Corrigir erro de conexão fechada com dois inserts consecutivos
+        query = "INSERT INTO categoria (nome_categoria, obs) VALUES (?, ?)"
 
         cur = conn.cursor()
-        cur.execute(query, (f, i, d))
+        cur.execute(query, (c, o))
         conn.commit()
         cur.close()
         conn.close()
@@ -72,20 +74,20 @@ class FornecedorDAO:
     # TODO Adicionar try except nas funçoes sql
 
 
-    def apagar(id):
+    def Apagar(id):
         """
 
         :param conn:
         :param id:
         :return:
         """
-        query = "DELETE FROM fornecedor WHERE ID = ?"
+        query = "DELETE FROM categoria WHERE ID = ?"
 
         cur = conn.cursor()
-        cur.execute(query, (id,))
+        cur.execute(query, id)
         conn.commit()
 
-    def pesquisar(fornecedor=None):
+    def Pesquisa(categoria=None):
         """
 
         :param conn:
@@ -94,11 +96,11 @@ class FornecedorDAO:
         """
 
         cur = conn.cursor()
-        if fornecedor == None:
-            cur.execute("SELECT * FROM fornecedor")
+        if categoria == None:
+            cur.execute("SELECT * FROM categoria")
             result = cur.fetchall()
         else:
-            cur.execute("SELECT * FROM fornecedor WHERE nome_fornecedor = ?", fornecedor)
+            cur.execute("SELECT * FROM categoria WHERE nome_categoria = ?", categoria)
             result = cur.fechone()
 
         return result

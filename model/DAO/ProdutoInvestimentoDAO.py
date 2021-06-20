@@ -17,7 +17,7 @@ except sqlite3.Error as e:
 # TODO Retirar este treche e usar função de conexão comum
 
 
-class TipoInvestimentoDAO:
+class ProdutoInvestimentoDAO:
 
     # def conection(db):
     #     conn = None
@@ -37,7 +37,7 @@ class TipoInvestimentoDAO:
         # conn = conexao
         # db = conn.conection()
 
-    def atualizar(c, d, id):
+    def atualizar(produto, descricao, id):
         """
 
         :param conn:
@@ -45,12 +45,12 @@ class TipoInvestimentoDAO:
         :return:
         """
 
-        query = "UPDATE tipo_investimento SET categoria = ?, descricao = ? WHERE id = ?"
+        query = "UPDATE produto_investimento SET produto = ?, descricao = ? WHERE id = ?"
         cur = conn.cursor()
-        cur.execute(query, (c, d, id))
+        cur.execute(query, (produto, descricao, id))
         conn.commit()
 
-    def gravar(c, d):
+    def gravar(produto, descricao):
         """
 
         :param conn:
@@ -58,10 +58,10 @@ class TipoInvestimentoDAO:
         :return:
         """
 
-        query = "INSERT INTO tipo_investimento (categoria, descricao) VALUES (?, ?)" #TODO Corrigir erro de conexão fechada com dois inserts consecutivos
+        query = "INSERT INTO produto_investimento (produto, descricao) VALUES (?, ?)" #TODO Corrigir erro de conexão fechada com dois inserts consecutivos
 
         cur = conn.cursor()
-        cur.execute(query, (c, d))
+        cur.execute(query, (produto, descricao))
         conn.commit()
         conn.close()
 
@@ -77,13 +77,13 @@ class TipoInvestimentoDAO:
         :param id:
         :return:
         """
-        query = "DELETE FROM tipo_investimento WHERE ID = ?"
+        query = "DELETE FROM produto_investimento WHERE ID = ?"
 
         cur = conn.cursor()
         cur.execute(query, (id,))
         conn.commit()
 
-    def pesquisar(categoria=None):
+    def pesquisar(produto=None):
         """
 
         :param conn:
@@ -92,11 +92,11 @@ class TipoInvestimentoDAO:
         """
 
         cur = conn.cursor()
-        if categoria == None:
-            cur.execute("SELECT * FROM tipo_investimento")
+        if produto == None:
+            cur.execute("SELECT * FROM produto_investimento")
             result = cur.fetchall()
         else:
-            cur.execute("SELECT * FROM tipo_investimento WHERE categoria = ?", categoria)
+            cur.execute("SELECT * FROM produto_investimento WHERE produto = ?", produto)
             result = cur.fechone()
 
         return result

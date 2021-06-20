@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_FormaPagamento(object):
     def setupUi(self, FormaPagamento):
         FormaPagamento.setObjectName("FormaPagamento")
-        FormaPagamento.resize(546, 347)
+        FormaPagamento.resize(569, 597)
         self.label_2 = QtWidgets.QLabel(FormaPagamento)
         self.label_2.setGeometry(QtCore.QRect(30, 40, 91, 16))
         self.label_2.setObjectName("label_2")
@@ -28,7 +28,7 @@ class Ui_FormaPagamento(object):
         self.label_3.setGeometry(QtCore.QRect(30, 140, 101, 16))
         self.label_3.setObjectName("label_3")
         self.pteObs = QtWidgets.QPlainTextEdit(FormaPagamento)
-        self.pteObs.setGeometry(QtCore.QRect(30, 230, 481, 71))
+        self.pteObs.setGeometry(QtCore.QRect(30, 230, 511, 71))
         self.pteObs.setObjectName("pteObs")
         self.leFormaPagamento = QtWidgets.QLineEdit(FormaPagamento)
         self.leFormaPagamento.setGeometry(QtCore.QRect(30, 160, 241, 20))
@@ -39,6 +39,17 @@ class Ui_FormaPagamento(object):
         self.rbCredito = QtWidgets.QRadioButton(FormaPagamento)
         self.rbCredito.setGeometry(QtCore.QRect(330, 80, 101, 17))
         self.rbCredito.setObjectName("rbCredito")
+        self.tbwFormaPagamento = QtWidgets.QTableWidget(FormaPagamento)
+        self.tbwFormaPagamento.setGeometry(QtCore.QRect(30, 350, 511, 121))
+        self.tbwFormaPagamento.setObjectName("tbwFormaPagamento")
+        self.tbwFormaPagamento.setColumnCount(0)
+        self.tbwFormaPagamento.setRowCount(0)
+        self.pbSalvarEditar = QtWidgets.QPushButton(FormaPagamento)
+        self.pbSalvarEditar.setGeometry(QtCore.QRect(40, 530, 88, 34))
+        self.pbSalvarEditar.setObjectName("pbSalvarEditar")
+        self.pbApagar = QtWidgets.QPushButton(FormaPagamento)
+        self.pbApagar.setGeometry(QtCore.QRect(410, 530, 88, 34))
+        self.pbApagar.setObjectName("pbApagar")
 
         self.retranslateUi(FormaPagamento)
         QtCore.QMetaObject.connectSlotsByName(FormaPagamento)
@@ -51,6 +62,8 @@ class Ui_FormaPagamento(object):
         self.label_3.setText(_translate("FormaPagamento", "Forma de pagamento"))
         self.rbDebita.setText(_translate("FormaPagamento", "Débito"))
         self.rbCredito.setText(_translate("FormaPagamento", "Crédito"))
+        self.pbSalvarEditar.setText(_translate("FormaPagamento", "Salvar"))
+        self.pbApagar.setText(_translate("FormaPagamento", "Apagar"))
 
 
 if __name__ == "__main__":
